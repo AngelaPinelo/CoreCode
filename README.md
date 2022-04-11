@@ -7,6 +7,7 @@
 
 # 1. Tuesday
 ## Programming Languages
-We know how  all programming languages work: You write code to tell it what to do, but there are actually 2 different types of programming languages: compiled and interpreted. <br>
+We know how  all programming languages work: You write code to the computer to tell it what to do, but there are actually 2 different types of programming languages: compiled and interpreted. <br>
 #### Compiled
-A **compiler**
+A **compiler** can be defined as a machine or a program that converts instructions from one language to another, for programming languages a compiler converts the code to a machine-languaje or low level language so that it can be read and executed by a computer. <br>
+Compiled Languages are directly translated to a machine code that it's executed by the processor. This types of languages give more control over the memory management, every time you need to change the code the program needs to be "rebuiled" (that means it needs to be compiled again). 
