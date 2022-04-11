@@ -15,3 +15,12 @@ Compiled Languages are directly translated to a machine code that it's executed 
 An **Interpreter** it's a program that reads the code line by line and traduce it to the computer for it to execute each instruccion line by line. Interpreted Languages do exactly the same, they are executed line by line. Some examples of this languages are: Python, JavaScript, Ruby. 
 ## Is Java Compiled, Interpreted or both?
 Java uses a two-step compilation using the Java compiler and the Java Virtual Machine (JVM). The Java Compiler checks the correct syntax of the code. Java Compiler is designed to be a bytecode compiler, it creates a file  written purely in bytecode based on the written code. Java Virtual Machine interprets the bytecode by loading the class file to machine Language.
+## Pseudocode exercise
+```
+  1. START
+  2. Amount  <-- Get (From User)
+  3. BitValue <-- Get From (https://www.google.com/finance/quote/USD-BTC)
+  4. Total <-- Amount * BitValue
+  5. PRINT Total
+  6. END
+```
