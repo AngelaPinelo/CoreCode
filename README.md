@@ -41,8 +41,8 @@ Java uses a two-step compilation using the Java compiler and the Java Virtual Ma
 ```assembly
 .data
                
-        number1: .asciiz "\nPlease enter the first number: "
-        number2: .asciiz "\nPlease enter the second number: "
+        number1: .asciiz "Please enter the first number: "
+        number2: .asciiz "Please enter the second number: "
         total: .asciiz "\nThe sum is: "
   .text
         main:
