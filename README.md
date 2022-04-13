@@ -25,3 +25,59 @@ Java uses a two-step compilation using the Java compiler and the Java Virtual Ma
   6. END
 ```
 ## 2. Wednesday
+### Date of birth 
+### MIPS 
+`Program that display my name`:
+```assembly
+  .data
+	      name: .asciiz "\nAngela Pinelo\n"
+  .text
+	      main:
+              li $v0, 4
+              la $a0, name
+              syscall
+```
+`Program that adds any two given numbers provided by the user`:
+```assembly
+.data
+               
+        number1: .asciiz "\nPlease enter the first number: "
+        number2: .asciiz "\nPlease enter the second number: "
+        total: .asciiz "\nThe sum is: "
+  .text
+        main:
+             
+              li $v0, 4
+              la $a0, number1
+              syscall
+
+              li $v0, 5
+              syscall
+
+              # saving 
+              move $t0, $v0
+
+              
+              li $v0, 4
+              la $a0, number2
+              syscall
+
+              li $v0, 5
+              syscall
+
+              # saving 
+              move $t1, $v0
+
+              # adding 
+              add $t2, $t0, $t1
+
+              # showing 
+              li $v0, 4
+              la $a0, total
+              syscall
+
+              # printing 
+              li $v0, 1
+              move $a0, $t2
+              syscall
+              ```
