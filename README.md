@@ -3,7 +3,7 @@
 # Week Challenges
 1. [Tuesday](#1-tuesday)
 2. [Wednesday](#2-wednesday)
-3. [Thursday](#3-feedback)
+3. [Thursday](#3-thursday)
 
 ## 1. Tuesday
 ### Programming Languages
@@ -88,4 +88,43 @@ My year of birth: 2002
               li $v0, 1
               move $a0, $t2
               syscall
-              ```
+```
+
+## 3. Thursday	
+### Exercise No.1
+`Print all the even numbers in range from 1 to 100`:
+```javascript
+//the letter i acts as an index, this means 
+//it takes the value of the number as it increases in 1 
+for (var i = 0; i <= 100; i++) {
+ //the % or mod give us the reminer of a division
+  if (i % 2 == 0) console.log(i);
+}
+```
+### Exercise No.2
+`Code correction`:
+```javascript
+var cond = false;
+//The if statement evaluates a condition to execute an action
+//that's why we need to use "==" to compare instead of "=" to asignate a value
+if ((cond == true)) {
+  console.log('The cond variable is true');
+} else {
+  console.log('The cond variable is false');
+}
+```
+### Exercise No.3
+`Code correction`:
+```javascript
+//We need to evaluate all the conditions at the same time
+//that's why we use de and operator "&&" in the else if 
+var n = 100;
+if (n == 100) {
+  console.log('This is a special number!');
+}
+ else if (n % 10 == 0 && n < 1000 && n!=100 ){  
+  console.log('This number is almost special');
+}else {
+  console.log('Just a regular number');
+}
+```
