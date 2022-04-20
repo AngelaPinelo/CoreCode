@@ -128,3 +128,40 @@ if (n == 100) {
   console.log('Just a regular number');
 }
 ```
+<h1 align="center">Week No. 2</h1>
+
+# Week Challenges
+1. [Monday](#1-monday)
+2. [Tuesday](#2-wednesday)
+3. [Thursday](#3-thursday)
+
+## 1. Monday
+### Solve the following exercises:
+#### Multiply 
+The following code does not execute properly:
+```javascript
+function multiply(a, b) {
+   a * b
+}
+```
+Solution: </br> 
+The function was missing the return statement
+```javascript
+function multiply(a, b) {
+   return a * b;
+}
+```
+#### ASCII Total
+You'll be given a string, and have to return the sum of all characters as an int. </br>The function should be able to handle all ASCII characters. </br>
+Solution:</br>
+To solve this exercise easier we used the method "charCodeAt()" that returns an integer using the ASCII table. </br>
+you can find more information about that method by clicking here: [charCodeAt - MDN](https://developer.mozilla.org/en-US/docs/web/javascript/reference/global_objects/string/charcodeat)
+```javascript
+function uniTotal (string) {
+let total = 0;
+for (let i=0; i<string.length; i++){
+  total+= string[i].charCodeAt();
+}
+return total;
+}
+```
