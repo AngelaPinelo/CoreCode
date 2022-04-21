@@ -155,7 +155,7 @@ function multiply(a, b) {
 You'll be given a string, and have to return the sum of all characters as an int. </br>The function should be able to handle all ASCII characters. </br>
 Solution:</br>
 To solve this exercise easier we used the method "charCodeAt()" that returns an integer using the ASCII table. </br>
-you can find more information about that method by clicking here: [charCodeAt - MDN](https://developer.mozilla.org/en-US/docs/web/javascript/reference/global_objects/string/charcodeat)
+you can find more information about that method by clicking here: [charCodeAt()](https://developer.mozilla.org/en-US/docs/web/javascript/reference/global_objects/string/charcodeat)
 ```javascript
 function uniTotal (string) {
 let total = 0;
@@ -163,5 +163,57 @@ for (let i=0; i<string.length; i++){
   total+= string[i].charCodeAt();
 }
 return total;
+}
+```
+#### Char From ASCII Value
+Write a function which takes a number and returns the corresponding ASCII char for that value.</br>
+Solution:
+```javascript
+function getChar(c){
+  let letra = '';
+  let index= c;
+  letra=String.fromCharCode(c);
+  return letra
+}
+```
+#### Binary Addition
+Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+</br>
+The binary number returned should be a string.</br>
+**Solution:** To solve this exercise we used "toString()" method, using this method with a number and passing as a </br>parameter the number "2"  returns the binary equivalent as a String.</br> You can find more information about this method by cliking here:  [toString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toString)
+```javascript
+function addBinary(a,b) {
+let suma = 0;
+suma = a+b;
+let binary = 0;
+binary = suma.toString(2);
+  return binary;
+}
+```
+#### Student's Final Grade
+**Instructions**: Create a function finalGrade, which calculates the final grade of a student depending on two parameters: a grade for the exam and a number of completed projects.</br>
+
+This function should take two arguments: exam - grade for exam (from 0 to 100); projects - number of completed projects (from 0 and above);</br>
+
+This function should return a number (final grade). There are four types of final grades:</br>
+
+100, if a grade for the exam is more than 90 or if a number of completed projects more than 10.</br>
+90, if a grade for the exam is more than 75 and if a number of completed projects is minimum 5.</br>
+75, if a grade for the exam is more than 50 and if a number of completed projects is minimum 2.</br>
+0, in other cases
+**Solution**: 
+```javascript
+function finalGrade (exam, projects) {
+ let nota = 0;
+  if (exam > 90 || projects > 10){
+  nota = 100;
+  }
+  else if (exam > 75 && projects >= 5){
+  nota = 90;
+  }
+  else if (exam > 50 && projects >= 2){
+  nota = 75;
+  }
+  return nota;
 }
 ```
