@@ -1,5 +1,4 @@
 <h1 align="center">Week No. 1</h1>
-
 # Week Challenges
 1. [Tuesday](#1-tuesday)
 2. [Wednesday](#2-wednesday)
@@ -131,9 +130,9 @@ if (n == 100) {
 <h1 align="center">Week No. 2</h1>
 
 # Week Challenges
-1. [Tuesday](Tuesday)
+1. [Tuesday](tuesday)
 2. [Wednesday](wednesday)
-3. [Thursday](#3-thursday)
+3. [Thursday](thursday)
 
 ## Tuesday
 ### Solve the following exercises:
@@ -217,6 +216,70 @@ function finalGrade (exam, projects) {
   return nota;
 }
 ```
+## Wednesday
+### Solve the following exercises:
+#### Holiday VIII - Duty Free
+**Instructions:** The purpose of this kata is to work out just how many bottles of duty free whiskey you would have to buy</br> such that the saving over the normal high street price would effectively cover the cost of your holiday.</br>
+
+You will be given the high street price (normPrice), the duty free discount (discount) and the cost of the holiday.</br>
+
+For example, if a bottle cost £10 normally and the discount in duty free was 10%, you would save £1 per bottle. If your holiday</br> cost £500, the answer you should return would be 500.</br>
+
+All inputs will be integers. Please return an integer. Round down.</br>
+**Solution:** To solve this exercise was used the parseInt method, you can read more about the method by clicking here: [parseInt()](https://www.delftstack.com/es/howto/javascript/javascript-float-to-int/)
+```javascript
+function dutyFree(normPrice, discount, hol){
+let precioDescuento = normPrice *(discount / 100);
+let cantBotellasVender= hol/precioDescuento;
+let entero = parseInt(cantBotellasVender);
+  return entero;
+}
+```
+#### Twice As Old
+**Instructions:** Your function takes two arguments: </br>
+
+current father's age (years)</br>
+current age of his son (years)</br>
+Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old).</br>
+**Solution:**
+```javascript
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  let twiceAge= sonYearsOld*2;
+  let yearsAgo= dadYearsOld - twiceAge
+  return Math.abs(yearsAgo)
+}
+```
+### Valid Spacing
+**Instructions:** Your task is to write a function called valid_spacing() or validSpacing() which checks if a string has valid</br> spacing. The function should return either true or false (or the corresponding value in each language).</br>
+
+For this kata, the definition of valid spacing is one space between words, and no leading or trailing spaces. Words can be any</br> consecutive sequence of non space characters.</br>
+**Solution:**
+```javascript
+function validSpacing(s) {
+  //Si no hay nada desde el inicio
+  if (s.length == 0) return true;
+  //para verificar que la primera posición y la última no sean espacios
+  if (s[0] == ' ' || s[s.length - 1] == ' '|| s== '') return false;
+  //Si hacemos separamos por espacios
+  let sinEspacios = s.split(' ');
+  //recorremos la cadena sinEspacios de 1 en 1
+  for (let i = 0;  i < sinEspacios.length; i++) {
+  //y si no hay nada es  falso ya que esto significa que habían 2 espacios juntos
+    if (sinEspacios[i] == '') return false;
+  }
+  return true;
+}
+```
+### Fake Binary
+**Instructions:** Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'.</br> Return the resulting string.
+**Solution:** 
+```javascript
+function fakeBin(x) {
+  let below5= x.replace(/[1234]/g,'0');
+  let above5= below5.replace(/[56789]/g,'1');
+  return above5;
+}
+```
 ## Thursday
 ### Solve the following exercises:
 #### Remove All Exclamation Marks From The End Of Sentence
@@ -243,7 +306,9 @@ function shortcut (string) {
   return no5;
 }
 ```
-#### Rock Paper Scissors!
+#### Rock Paper Scissors! </br>
+![programando compulsivamente](https://media.giphy.com/media/3ohzdGnD5vAud1NCZW/giphy.gif) 
+</br>
 **Solution:**
 ```javascript
 const rps = (p1, p2) => {
