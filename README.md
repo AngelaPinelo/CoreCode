@@ -131,11 +131,11 @@ if (n == 100) {
 <h1 align="center">Week No. 2</h1>
 
 # Week Challenges
-1. [Monday](#1-monday)
-2. [Tuesday](#2-wednesday)
+1. [Tuesday](Tuesday)
+2. [Wednesday](wednesday)
 3. [Thursday](#3-thursday)
 
-## 1. Monday
+## Tuesday
 ### Solve the following exercises:
 #### Multiply 
 The following code does not execute properly:
@@ -217,3 +217,60 @@ function finalGrade (exam, projects) {
   return nota;
 }
 ```
+## Thursday
+### Solve the following exercises:
+#### Remove All Exclamation Marks From The End Of Sentence
+**Solution**: To solve this exercise we used the "replace()" method that basically replace values that are inside of a string </br> for others. You can learn more about this method by clicking here: [replace()](https://www.w3schools.com/jsref/jsref_replace.asp)
+```javascript
+function remove (string) {
+  // we need to add an extra character to indacate the end of the string 
+let cadena = string + '#'
+let resultado = cadena.replace(/!+#/, '');
+let resultado2 = resultado.replace ('#','');
+  return resultado2;
+}
+```
+#### Vowel Remover
+**Instructions:** Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
+**Solution:** Again we used the replace method.
+```javascript
+function shortcut (string) {
+  let no1= string.replace(/a/g ,'');
+  let no2= no1.replace(/e/g,'');
+  let no3= no2.replace(/i/g,'');
+  let no4= no3.replace(/o/g,'');
+  let no5= no4.replace(/u/g,'');
+  return no5;
+}
+```
+#### Rock Paper Scissors!
+**Solution:**
+```javascript
+const rps = (p1, p2) => {
+  let result =''
+  if (p1 == p2){
+    result = 'Draw!'
+  }
+  else if (p1 == 'scissors' && p2 == 'rock'){
+    result ='Player 2 won!'
+  }
+  else if (p1 == 'scissors' && p2 == 'paper'){
+    result ='Player 1 won!'
+  }
+  else if (p1 == 'rock' && p2 == 'scissors'){
+    result ='Player 1 won!'
+  }
+  else if (p1 == 'rock' && p2 == 'paper'){
+    result ='Player 2 won!'
+  }
+  else if (p1 == 'paper' && p2 == 'rock'){
+    result ='Player 1 won!'
+  }
+  else if (p1 == 'paper' && p2 == 'scissors'){
+    result ='Player 2 won!'
+  }
+  return result;
+};
+```
+#### Persistent Bugger
+**Solution:**
