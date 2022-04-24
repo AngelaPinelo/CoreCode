@@ -129,12 +129,9 @@ if (n == 100) {
 ```
 <h1 align="center">Week No. 2</h1>
 
-# Week Challenges
-1. [Tuesday](tuesday)
-2. [Wednesday](wednesday)
-3. [Thursday](thursday)
 
-## Tuesday
+
+##  Tuesday
 ### Solve the following exercises:
 #### Multiply 
 The following code does not execute properly:
