@@ -1,3 +1,5 @@
+
+
 <h1 align="center">Week No. 1</h1>
 # Week Challenges
 1. [Tuesday](#1-tuesday)
@@ -335,4 +337,23 @@ const rps = (p1, p2) => {
 };
 ```
 #### Persistent Bugger
+**Instructions:** Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence,</br> which is the number of times you must multiply the digits in num until you reach a single digit.</br>
 **Solution:**
+```javascript
+function persistence(num) {
+   let contador = 0;
+   let NumString = num.toString();
+   let digito = num.toString().split('');
+
+  //the results of the multiplication actually don't matter 
+ if (NumString.length ===1){
+   return contador;
+ }else{
+   //we need mult to be a global variable to make the function recursive
+  var mult = 1;
+  for (var i = 0; i < digito.length; i++) {
+    mult *= parseInt(digito[i])
+  }}
+  return 1 + persistence(parseInt(mult));
+}
+```
