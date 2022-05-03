@@ -356,7 +356,8 @@ function persistence(num) {
 }
 ```
 <h1 align="center">Week No. 3</h1>
-##  Monday
+
+## Monday
 ### Solve the following exercises:
 #### Who likes it? 
 **Solution:**
