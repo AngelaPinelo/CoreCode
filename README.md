@@ -387,3 +387,16 @@ var countBits = function(n) {
   }return ones
 };
 ```
+## Tuesday
+#### Simple Pig Latin
+**Solution:**
+```javascript
+function pigIt(str){
+  
+  let word = str.split(' ');
+  for(let char=0; char<word.length; char++){    
+    if(word[char]=='!' || word[char]=='?')continue
+    word[char]= word[char].slice(1)+ word[char].slice(0,1)+'ay'
+  }return word.join(' ')
+}
+```
