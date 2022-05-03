@@ -400,3 +400,17 @@ function pigIt(str){
   }return word.join(' ')
 }
 ```
+## Wednesday
+#### Valid Parentheses
+**Solution:**
+```javascript
+function validParentheses(parens) {
+  let contador = 0;
+  for (let i = 0; i < parens.length; i++) {
+    if (parens[i] == ')') contador-=1;
+    if (parens[i] == '(') contador+=1;
+    if (contador < 0) return false;
+  }
+  return contador == 0;
+}
+```
