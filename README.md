@@ -1,10 +1,10 @@
 
 
+# Week Challenges  
+
+- Week 1 : [Introduction to programming & Javascript](weeks)
+
 <h1 align="center">Week No. 1</h1>
-# Week Challenges
-1. [Tuesday](#1-tuesday)
-2. [Wednesday](#2-wednesday)
-3. [Thursday](#3-thursday)
 
 ## 1. Tuesday
 ### Programming Languages
