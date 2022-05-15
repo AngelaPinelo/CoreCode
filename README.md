@@ -2,7 +2,7 @@
 
 # Week Challenges  
 
-- Week 1 : [Introduction to programming & Javascript](weeks/week-1)
+- Week 1 : [Introduction to programming & Javascript](weeks)
 
 <h1 align="center">Week No. 1</h1>
 
