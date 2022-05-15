@@ -1,7 +1,6 @@
 
+<h1 align="center">Week No. 1</h1></br>
 
-<h1 align="center">Week No. 1</h1>
-# Week Challenges
 1. [Tuesday](#1-tuesday)
 2. [Wednesday](#2-wednesday)
 3. [Thursday](#3-thursday)
