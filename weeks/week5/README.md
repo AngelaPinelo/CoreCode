@@ -5,7 +5,7 @@
 3. [Thursday](#3-thursday)
 
 
-## 1. monday
+## 1. Monday
 ### Find the missing letter
 #### Instructions: 
 Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.</br>
@@ -52,40 +52,143 @@ The array will always contain letters in only one case.
 }
 ```
 
-## 3. Thursday	
-### String Cleaning 
-#### Instructions: 
-Your boss decided to save money by purchasing some cut-rate optical character recognition software for scanning </br>
-in the text of old novels to your database. At first it seems to capture words okay, but you quickly notice that it throws </br>
-in a lot of numbers at random places in the text.
-</br>
-`Solution`:
-```javascript
-  function stringClean(s){
-  // we just need to remove the numbers 
-  let a=s.replace(/\d+/g,'')
-  return a
-}
-```
-### Regex password validation 
-#### Instructions: 
-You need to write regex that will validate a password to make sure it meets the following criteria:</br>
+## 3. Tuesday	
+### Exercise 1
+Object Type </br>
 
--At least six characters long</br>
--contains a lowercase letter</br>
--contains an uppercase letter</br>
--contains a number</br>
-Valid passwords will only be alphanumeric characters.</br>
-</br>
-`Solution`:
-```javascript
-  function validate(password) {
-  return /^[A-Za-z0-9]{6,}$/.test(password) 
-  //we can use the symbol + to indicate that it will came at least one time 
-  && /[a-z]+/.test(password) 
-  //or we can also use the {1} for the same purpose
-  && /[A-Z]{1}/.test(password)
-  && /\d{1}/.test(password);
+#### Anónimos
+
+```typescript
+function greet(person: { name: string; age: number }) {
+  return "Hello " + person.name;
 }
 ```
 
+### Interfaces
+
+```typescript
+interface Person {
+  name: string;
+  age: number;
+}
+ 
+function greet(person: Person) {
+  return "Hello " + person.name;
+}
+```
+
+### Alias
+
+```typescript
+type Person = {
+  name: string;
+  age: number;
+};
+ 
+function greet(person: Person) {
+  return "Hello " + person.name;
+}
+```
+
+
+
+`Solution`:
+
+```typescript
+export type User = {
+    name: string;
+    age: number;
+    occupation: string;
+};
+
+export const users: User[] = [
+    {
+        name: 'Max Mustermann',
+        age: 25,
+        occupation: 'Chimney sweep'
+    },
+    {
+        name: 'Kate Müller',
+        age: 23,
+        occupation: 'Astronaut'
+    }
+];
+
+export function logPerson(user: User) {
+    console.log(` - ${user.name}, ${user.age}`);
+}
+
+console.log('Users:');
+users.forEach(logPerson);
+```
+
+<a name="tp_unions"></a>
+
+### Exercise 2
+
+
+Unions:
+
+`Solution`:
+ ```typescript
+ interface User {
+    name: string;
+    age: number;
+    occupation: string;
+}
+
+interface Admin {
+    name: string;
+    age: number;
+    role: string;
+}
+
+export type Person = User | Admin;
+
+export const persons: Person[]  = [
+    {
+        name: 'Max Mustermann',
+        age: 25,
+        occupation: 'Chimney sweep'
+    },
+    {
+        name: 'Jane Doe',
+        age: 32,
+        role: 'Administrator'
+    },
+    {
+        name: 'Kate Müller',
+        age: 23,
+        occupation: 'Astronaut'
+    },
+    {
+        name: 'Bruce Willis',
+        age: 64,
+        role: 'World saver'
+    }
+];
+
+export function logPerson(user: Person) {
+    console.log(` - ${user.name}, ${user.age}`);
+}
+
+persons.forEach(logPerson);
+ ```
+
+
+ ### Exercise 4
+ 
+ Same as 3 but using if sentence </br>
+`Solution`:
+```typescript
+export function logPerson(person: Person) {
+    let additionalInformation: string = '';
+    if ('role' in person) {
+        additionalInformation = person.role;
+    }
+    if ('occupation' in person) {
+        additionalInformation = person.occupation;
+    }
+    console.log(` - ${person.name}, ${person.age}, ${additionalInformation}`);
+}
+```
