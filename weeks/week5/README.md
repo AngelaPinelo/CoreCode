@@ -2,7 +2,7 @@
 <h1 align="center">Week No. 5</h1></br>
 
 2. [Monday](#1-monday)
-3. [Thursday](#3-thursday)
+3. [Tuesday](#3-tuesday)
 
 
 ## 1. Monday
