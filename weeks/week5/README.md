@@ -1,36 +1,52 @@
 
-<h1 align="center">Week No. 4</h1></br>
+<h1 align="center">Week No. 5</h1></br>
 
-2. [Wednesday](#2-wednesday)
+2. [Monday](#1-monday)
 3. [Thursday](#3-thursday)
 
 
-## 2. Wednesday
-### Simple Validation of a Username 
+## 1. monday
+### Find the missing letter
 #### Instructions: 
-Write a simple regex to validate a username. Allowed characters are: </br>
--lowercase letters,</br>
--numbers,</br>
--underscore</br>
-Length should be between 4 and 16 characters (both included).</br>
+Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.</br>
+
+You will always get an valid array. And it will be always exactly one letter be missing. The length of the array will always be at least 2.</br>
+The array will always contain letters in only one case.
 </br>
 `Solution`:
 ```javascript
-  function validateUsr(username) {
-  res =  /^[a-z0-9_]{4,16}$/.test(username) 
-  return res
+  function findMissingLetter(array) {
+  //we´re going to use charCodeAt bc it give us the unicode value of the letter
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].charCodeAt() + 1 !== array[i + 1].charCodeAt()) {
+  //with fromCharCode we can get the letter from the unicode value
+      let a= String.fromCharCode(array[i].charCodeAt() + 1);
+      return a
+    }
+  }
 }
 ```
-### Get Number from String  
+### Reverse or Rotate  
 #### Instructions: 
-Write a function which removes from string all non-digit characters and parse the remaining to number
+
 </br>
 `Solution`:
 ```javascript
-  function getNumberFromString(s) {
-  let a= s.replace(/\D/g, '');
-  let b= parseInt(a)
-  return b 
+ function revrot(str, sz) {
+  if (sz <= 0 || sz >= str.length || str === '') return ''
+  let regex = new RegExp(`\\d{${sz}}`, 'g')
+  let chunks = str.match(regex)
+  let sum = 0, chunkr=[]
+  let resultado = chunks.map((chunk) => {
+    sum = chunk
+      .split('')
+      .map((digit) => Math.pow(+digit, 3))
+      .reduce((prev, curr) => prev + curr, 0);
+    chunkr = chunk.split('')
+    if (sum % 2 == 0) return chunkr.reverse().join('')
+    return chunkr.push(chunkr.shift()), chunkr.join('')
+  });
+  return resultado.join('')
 }
 ```
 
