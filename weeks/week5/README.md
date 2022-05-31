@@ -30,7 +30,9 @@ The array will always contain letters in only one case.
 #### Instructions: 
 
 </br>
+
 `Solution`:
+
 ```javascript
  function revrot(str, sz) {
   if (sz <= 0 || sz >= str.length || str === '') return ''
@@ -86,18 +88,4 @@ Valid passwords will only be alphanumeric characters.</br>
   && /\d{1}/.test(password);
 }
 ```
-### Exercise No.3
-`Code correction`:
-```javascript
-//We need to evaluate all the conditions at the same time
-//that's why we use de and operator "&&" in the else if 
-var n = 100;
-if (n == 100) {
-  console.log('This is a special number!');
-}
- else if (n % 10 == 0 && n < 1000 && n!=100 ){  
-  console.log('This number is almost special');
-}else {
-  console.log('Just a regular number');
-}
-```
+
