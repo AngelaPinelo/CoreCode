@@ -30,6 +30,41 @@ var countBits = function(n) {
   }return ones
 };
 ```
+#### Your order, please
+**Instruccions:** Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.</br>
+
+Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).</br>
+
+If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.</br>
+**Solution:**
+```javascript
+function order(words){
+  
+  if(words == "") return ""
+  words = words.split(" ")
+  numeros = []
+  
+  for (let i = 0; i < words.length; i++) {
+      cadena = words[i]
+      for (let j = 0; j < cadena.length; j++) {
+          numeros.push(Number(cadena[j]));
+      }
+  }
+  numeros.sort();
+  words2 = []
+  for (let i = 0; i < numeros.length; i++) {
+      numeros_str = ""+numeros[i]
+      for (var j = 0; j < words.length; j++) {
+          if(words[j].includes(numeros_str)){
+              words2.push(words[j])
+          }
+      }
+  }
+  words2 = words2.join(" ")
+  return words2
+  
+}
+```
 ## Tuesday
 #### Simple Pig Latin
 **Solution:**
