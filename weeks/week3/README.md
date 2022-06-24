@@ -78,6 +78,30 @@ function pigIt(str){
   }return word.join(' ')
 }
 ```
+#### Counting Duplicates
+**Instruccions:** Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+**Solution:**
+```javascript
+function duplicateCount(text) {
+  //we use toLowerCase() to make it case insensitive  
+  text = text.toLowerCase().split('').sort();
+  //text is now an Array made by it owns elements
+  let indice = 0, result = 0, lastIndexOfChar = 0;
+  //indice works as the i in the for loops
+  while (text.length) {
+    lastIndexOfChar = text.lastIndexOf(text[indice]);
+    if (lastIndexOfChar !== indice) {
+      indice = lastIndexOfChar;
+      result++;
+    }
+    //++indice incrementa el valor y luego lo devuelve 
+    text = text.slice(++indice);
+    indice = 0;
+  }
+  return result;
+}
+```
+
 ## Wednesday
 #### Valid Parentheses
 **Solution:**
