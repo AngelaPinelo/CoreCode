@@ -135,3 +135,23 @@ function toCamelCase(str){
      return resultado
    }
 ```
+#### Unique in Order
+***Instructions:*** Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
+**Solution:**
+```javascript
+var uniqueInOrder=function(iterable){
+ //since we only need to search for a repeated character that is next to another
+  let repeated=''
+  //this array will store the output 
+  let answer=[]
+  //we use a for loop for 'iterable'
+  for(let i=0; i<iterable.length;i++){
+    //first we need to compare the actual character to the last one
+    if(iterable[i]!= repeated){
+      answer.push(iterable[i])
+      //in repeated we storage the last letter in the string
+      repeated=iterable[i]
+    }
+  }return answer
+}
+```
