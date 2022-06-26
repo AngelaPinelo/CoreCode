@@ -116,3 +116,22 @@ function validParentheses(parens) {
   return contador == 0;
 }
 ```
+#### Convert string to camel case
+***Instructions:*** Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
+**Solution:**
+```javascript
+function toCamelCase(str){    
+  //first of we remove the "-" and replace it with an "_"
+  //this way it's going to be easier to work with avoiding more validations
+    str=str.replace(/-/g, '_')
+    let resultado=''    
+    for (let i = 0; i < str.length; i++) {
+      if (i != 0 && (str[i - 1] === '_' )) {
+        resultado+= str[i].toUpperCase();
+      } else if (str[i] != '_') {
+        resultado += str[i];
+      }
+    }     
+     return resultado
+   }
+```
