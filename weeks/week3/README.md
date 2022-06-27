@@ -155,3 +155,55 @@ var uniqueInOrder=function(iterable){
   }return answer
 }
 ```
+## Thursday
+### Solve the following exercises:
+#### Encrypt this!
+**Instructions:** You want to create secret messages which can be deciphered by the Decipher this! kata. Here are the conditions: </br>
+
+-Your message is a string containing space separated words.</br>
+-You need to encrypt each word in the message using the following rules:</br>
+-The first letter must be converted to its ASCII code.</br>
+-The second letter must be switched with the last letter</br>
+-Keepin' it simple: There are no special characters in the input.</br>
+**Solution:**
+```javascript
+var encryptThis = function(text) {   
+  //now, we're going to use split to separate every word in text
+  text=text.split(' ')
+  let respuesta=[]
+  //a for loop for every word in 'text'
+  for(let i=0;i<text.length; i++){
+    //we call another fuction that receives as a parameter the word and returns the modified word
+    let palabra=Word(text[i])
+    //once we have the modified word we send it to the respuesta arrayy
+    respuesta.push(palabra)
+    //Last but not least xd we join them with a space ' '
+  } return respuesta.join(' ')
+  
+}
+
+function Word(word){
+  //on this variables we are going to store the modified text
+  let firstLetter='', RestText='', InTheMiddle='';
+  if(word.length===2){
+    //the first letter of the word store it's value in ASCII
+    firstLetter = word[0].charCodeAt(0)
+    //the final string returns the first letter plus a slice of the original word without the first letter
+    return `${firstLetter}${word.slice(1)}`
+  }else if(word.length>2){
+      firstLetter = word[0].charCodeAt(0)
+      //InTheMiddle it's the last letter of the original word
+      InTheMiddle =word[1]
+      //rest of the text it's the text that we do not need to modify
+      RestText = word[word.length-1]
+    //we modify the original word
+      word = word.slice(2, word.length-1);
+      word = `${firstLetter}${RestText}${word}${InTheMiddle}`
+      return word
+  }else{
+    //if text it's just 1 letter we return the ASCII value
+      return word.charCodeAt(0)
+    }
+  
+}
+```
