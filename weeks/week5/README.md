@@ -61,43 +61,6 @@ If</br>
 
 ## 3. Tuesday	
 ### Exercise 1
-Object Type </br>
-
-#### Anónimos
-
-```typescript
-function greet(person: { name: string; age: number }) {
-  return "Hello " + person.name;
-}
-```
-
-### Interfaces
-
-```typescript
-interface Person {
-  name: string;
-  age: number;
-}
- 
-function greet(person: Person) {
-  return "Hello " + person.name;
-}
-```
-
-### Alias
-
-```typescript
-type Person = {
-  name: string;
-  age: number;
-};
- 
-function greet(person: Person) {
-  return "Hello " + person.name;
-}
-```
-
-
 
 `Solution`:
 
