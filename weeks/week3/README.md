@@ -1,5 +1,10 @@
 <h1 align="center">Week No. 3</h1>
 
+1. [Monday](#1-monday)
+2. [Tuesday](#1-tuesday)
+2. [Wednesday](#2-wednesday)
+4. [Thursday](#3-thursday)
+
 ## Monday
 ### Solve the following exercises:
 #### Who likes it? 
