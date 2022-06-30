@@ -213,7 +213,7 @@ export function logPerson(person: Person) {
     console.log(` - ${person.name}, ${person.age}, ${additionalInformation}`);
 }
 ```
- ### Exercise 4
+ ### Exercise 5
  
  Same as 3 but using if sentence </br>
 `Solution`:
